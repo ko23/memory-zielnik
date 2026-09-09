@@ -1,5 +1,5 @@
 ---
-project: null
+project: "Herb Masters Duel"
 context_type: greenfield
 created: 2026-09-09
 updated: 2026-09-09
