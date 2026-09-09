@@ -13,8 +13,8 @@ timeline_budget:
   hard_deadline: 2026-09-13
   after_hours_only: true
 checkpoint:
-  current_phase: 7
-  phases_completed: [1, 2, 3, 4, 5, 6]
+  current_phase: 8
+  phases_completed: [1, 2, 3, 4, 5, 6, 7]
   gray_areas_resolved:
     - topic: "pain category"
       decision: "missing capability + workflow friction + decision paralysis + data trapped somewhere"
@@ -28,8 +28,8 @@ checkpoint:
       decision: "flat — no distinct roles between parent and child"
     - topic: "MVP flow / scope-cost"
       decision: "AI image generation scoped down to image lookup (e.g. Wikipedia) + user approval; 3-week after-hours timeline confirmed doable"
-  frs_drafted: 9
-  quality_check_status: pending
+  frs_drafted: 12
+  quality_check_status: accepted
 ---
 
 # Shape Notes
@@ -97,6 +97,12 @@ Acknowledged on 2026-09-09: full FR set (navigation, card creation with image lo
   > Socrates: No counter-argument raised; stands as written.
 - FR-009: When all tile pairs have been collected, the game ends and a winner (with score) is shown. Priority: must-have
   > Socrates: No counter-argument raised; stands as written.
+- FR-010: When a player's two selected tiles don't match, both tiles flip back face-down before the next player's turn begins. Priority: must-have
+  > Socrates: Counter-argument considered: "could be too punishing for very young kids, who might need a peek/hint instead of tiles vanishing instantly." Resolution: kept as written — it's good for memory training.
+- FR-011: Before the game begins, players are asked to choose who goes first. Priority: must-have
+  > Socrates: Counter-argument considered: "letting players 'choose' who goes first could cause sibling friction/arguing instead of a quick setup step." Resolution: kept as written; no counter-argument accepted.
+- FR-012: When both players end the game with the same number of collected pairs, the end screen declares a tie rather than a winner. Priority: must-have
+  > Socrates: Counter-argument considered: "a flat tie could feel anticlimactic for kids after a full game." Resolution: kept as written; no counter-argument accepted.
 
 ## User Stories
 
