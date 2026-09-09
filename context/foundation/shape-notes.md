@@ -10,7 +10,7 @@ target_scale:
   data_volume: small
 timeline_budget:
   mvp_weeks: 1
-  hard_deadline: 2026-09-14
+  hard_deadline: 2026-09-13
   after_hours_only: true
 checkpoint:
   current_phase: 6
