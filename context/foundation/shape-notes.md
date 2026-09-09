@@ -3,10 +3,15 @@ project: null
 context_type: greenfield
 created: 2026-09-09
 updated: 2026-09-09
+product_type: web-app
+target_scale:
+  users: medium
+  qps: low
+  data_volume: small
 timeline_budget:
-  mvp_weeks: 3
-  hard_deadline: null
-  after_hours_only: null
+  mvp_weeks: 1
+  hard_deadline: 2026-09-14
+  after_hours_only: true
 checkpoint:
   current_phase: 6
   phases_completed: [1, 2, 3, 4, 5]
@@ -60,6 +65,10 @@ Local profile; no login, no server account. Progress and any authored/edited her
 - Kid-appropriate UX — interactions and text stay simple/friendly enough for a child to follow without adult help mid-game.
 - No data loss on-device — authored herb cards and local profile data survive browser refreshes/restarts.
 - Fast enough to not lose kids' attention — card flips and image lookups feel instant.
+
+## Timeline acknowledgment
+
+Acknowledged on 2026-09-09: full FR set (navigation, card creation with image lookup + approval, game setup, gameplay, end screen) is targeted for a 4-day after-hours crunch (hard deadline 2026-09-13), well under the initially-discussed 3-week estimate. The user explicitly accepted the sustained-effort cost of this compressed timeline ("it's crunching time, baby") after the conflict between the original 3-week estimate and the hard deadline was surfaced.
 
 ## Functional Requirements
 
