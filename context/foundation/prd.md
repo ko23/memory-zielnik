@@ -1,5 +1,5 @@
 ---
-project: "Herb Masters Duel"
+project: "Herbs Masters Duel"
 version: 1
 status: draft
 created: 2026-09-09
