@@ -55,7 +55,7 @@ Local profile; no login, no server account. Progress and any authored/edited her
 ## Success Criteria
 
 ### Primary
-- A user can create herb cards (herb name + a looked-up candidate image, e.g. via Wikipedia, approved or rejected by the user) and two players can play a full matching game to completion — flipping tiles until all pairs are collected — with a winner and score shown at the end.
+- A user can create herb cards (herb name + a looked-up candidate image from a public reference source, approved or rejected by the user) and two players can play a full matching game to completion — flipping tiles until all pairs are collected — with a winner and score shown at the end.
 
 ### Secondary
 - Scores are tracked across sessions (remembered per player name, beyond a single game).
@@ -77,7 +77,7 @@ Acknowledged on 2026-09-09: full FR set (navigation, card creation with image lo
   > Socrates: No counter-argument raised; stands as written.
 
 ### Card creation
-- FR-002: User can create a herb card with a name, a looked-up image (e.g. via Wikipedia), and the image's source/species label shown alongside it for cross-checking. Priority: must-have
+- FR-002: User can create a herb card with a name, a looked-up image from a public reference source, and the image's source/species label shown alongside it for cross-checking. Priority: must-have
   > Socrates: Counter-argument considered: "an automated lookup could return the wrong plant, defeating the point of teaching correct herbs." Resolution: revised to also display the image's source/species label, giving the approval step in FR-003 something concrete to check against.
 - FR-003: User can approve or reject the looked-up image before it's saved to a herb card. Priority: must-have
   > Socrates: Counter-argument considered: "a naive approval by any user (including a child) doesn't guarantee correctness." Resolution: paired with FR-002's source/species label — approval remains best-effort, not a correctness guarantee, but now has a name to cross-check against rather than a bare image.
@@ -137,6 +137,10 @@ No adaptive difficulty for the MVP — the board shuffle is uniform, with no per
 - No more than 2 local players — no support for 3+ players or online/remote multiplayer; strictly one device, two people taking turns.
 - No cloud sync / cross-device play — progress and decks never leave the device, consistent with the local-profile access model.
 - No content beyond herbs — no other plant categories, animals, or general trivia; herbs only, to keep the domain rule focused.
+
+## Forward: tech-stack
+
+- Card creation's image lookup was discussed using Wikipedia as an example public reference source. The PRD generalizes this to "a public reference source" to stay vendor-neutral — the actual data source/API is a downstream tech-stack-selection decision.
 
 ## Forward: technical-roadmap
 
