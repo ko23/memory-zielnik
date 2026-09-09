@@ -13,8 +13,8 @@ timeline_budget:
   hard_deadline: 2026-09-13
   after_hours_only: true
 checkpoint:
-  current_phase: 6
-  phases_completed: [1, 2, 3, 4, 5]
+  current_phase: 7
+  phases_completed: [1, 2, 3, 4, 5, 6]
   gray_areas_resolved:
     - topic: "pain category"
       decision: "missing capability + workflow friction + decision paralysis + data trapped somewhere"
@@ -124,3 +124,14 @@ No adaptive difficulty for the MVP — the board shuffle is uniform, with no per
 - A tile flip responds within 100 ms of the player's tap/click; image lookups during card creation may take longer since that's a separate, non-gameplay flow.
 - Authored herb cards and local profile data (progress, scores) survive a browser refresh or restart without loss.
 - The image-approval step reliably lets a user reject a wrong or unsafe looked-up image before it enters the deck.
+
+## Non-Goals
+
+- No custom plant-identification / computer-vision — the app never attempts to auto-identify a herb from a user's own photo; image lookup (and human approval) is enough.
+- No more than 2 local players — no support for 3+ players or online/remote multiplayer; strictly one device, two people taking turns.
+- No cloud sync / cross-device play — progress and decks never leave the device, consistent with the local-profile access model.
+- No content beyond herbs — no other plant categories, animals, or general trivia; herbs only, to keep the domain rule focused.
+
+## Forward: technical-roadmap
+
+- Adaptive/spaced-repetition difficulty (herbs a player mismatches more often resurface more frequently) was considered during Business Logic shaping and deliberately deferred out of MVP scope — a candidate for a later version, not part of this PRD.
