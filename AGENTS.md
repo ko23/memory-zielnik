@@ -4,6 +4,7 @@ Herbs Masters Duel is a browser-only, 2-player memory-matching game that teaches
 
 - Do not add a backend, database, authentication, or cloud sync. The PRD (`## Non-Goals` and `## Access Control` in @context/foundation/prd.md) locks this to a local-only, single-profile browser app — no Supabase, no server accounts, no cross-device sync.
 - Read @context/foundation/prd.md and @context/foundation/tech-stack.md before making product or stack decisions — they are the source of truth for scope and the chosen starter's rationale.
+- Start the dev server with `astro dev --background`, not plain `npm run dev` or foreground `astro dev` — a foreground process blocks the terminal for the rest of the session. Manage it with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
 ## Project Structure
 
@@ -14,29 +15,10 @@ Herbs Masters Duel is a browser-only, 2-player memory-matching game that teaches
 
 ## Commands
 
-- `npm run dev` — start the dev server at `localhost:4321`.
+- `npm run dev` — starts the dev server at `localhost:4321` in the foreground; see Hard Rules for the required `astro dev --background` variant.
 - `npm run build` — build to `./dist/`.
 - `npm run preview` — preview the production build locally.
-
-## Development
-
-When starting the dev server, use background mode:
-
-```
-astro dev --background
-```
-
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
 ## Documentation
 
 Full documentation: https://docs.astro.build
-
-Consult these guides before working on related tasks:
-
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
