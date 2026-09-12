@@ -2,7 +2,7 @@
 project: "Herb Masters Duel"
 context_type: greenfield
 created: 2026-09-09
-updated: 2026-09-09
+updated: 2026-09-13
 product_type: web-app
 target_scale:
   users: medium
@@ -10,7 +10,7 @@ target_scale:
   data_volume: small
 timeline_budget:
   mvp_weeks: 1
-  hard_deadline: 2026-09-13
+  hard_deadline: 2026-09-14T23:59
   after_hours_only: true
 checkpoint:
   current_phase: 8

@@ -11,7 +11,7 @@ target_scale:
   data_volume: small
 timeline_budget:
   mvp_weeks: 1
-  hard_deadline: 2026-09-13
+  hard_deadline: 2026-09-14T23:59
   after_hours_only: true
 ---
 
