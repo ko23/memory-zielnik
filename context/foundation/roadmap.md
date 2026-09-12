@@ -33,7 +33,7 @@ Parents teaching kids to recognize and use herbs have no good way to make the kn
 
 ## North star
 
-**S-01: User can create a herb card — name, a looked-up image from a public source, and its source/species label — then approve or reject the image before it saves.** This is the riskiest, least-certain part of the whole product (image-lookup accuracy, and whether the approval step actually catches a wrong match), so proving it works de-risks everything the game depends on before the game engine itself gets built.
+**S-02: User can set up and play a full 2-player memory-matching game to completion, with a winner (or tie) and score shown.** This matches the PRD's single Primary Success Criterion and its Business Logic section directly: the memory mechanic itself — flip, recall, match/mismatch — is what produces retention, so playing a full game to completion is what actually validates the core hypothesis (that this format makes herb recognition stick).
 
 > "North star" here means the smallest end-to-end slice worth proving first — not necessarily the flashiest one, but the one whose success or failure tells you the most about whether the rest of the plan holds.
 
@@ -84,7 +84,7 @@ Foundations below assume these are accurate and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:**
   - Which public reference source/API to use for herb image lookup (e.g. Wikipedia REST API, iNaturalist, GBIF)? — Owner: team. Block: no.
-- **Risk:** This is the north star and the riskiest technical unknown in the whole product (image-lookup accuracy); sequencing it first means the core assumption gets tested before more code is built on top of it.
+- **Risk:** Sequenced first because S-02 (the north star) depends on it — cards must exist before a game can be played — and it carries the riskiest technical unknown in the whole product (image-lookup accuracy); better to hit that early regardless of which slice validates the core hypothesis.
 - **Status:** proposed
 
 ### S-02: Two-player memory match to completion
@@ -96,7 +96,7 @@ Foundations below assume these are accurate and do NOT re-scaffold them.
 - **Parallel with:** —
 - **Blockers:** —
 - **Unknowns:** —
-- **Risk:** This is the PRD's single Primary Success Criterion, built as one continuous flow by design — setup, turn mechanics, and the end screen are one testable session per the PRD's own single User Story (US-01); splitting it further would produce pieces that aren't independently meaningful to play or verify.
+- **Risk:** This is the north star — the PRD's single Primary Success Criterion and the flow that actually tests whether the memory mechanic produces retention. Built as one continuous flow by design — setup, turn mechanics, and the end screen are one testable session per the PRD's own single User Story (US-01); splitting it further would produce pieces that aren't independently meaningful to play or verify.
 - **Status:** proposed
 
 ## Backlog Handoff
