@@ -110,6 +110,7 @@ Local profile; no login, no server account. Progress and any authored/edited her
 - No more than 2 local players — no support for 3+ players or online/remote multiplayer; strictly one device, two people taking turns.
 - No cloud sync / cross-device play — progress and decks never leave the device, consistent with the local-profile access model.
 - No content beyond herbs — no other plant categories, animals, or general trivia; herbs only, to keep the domain rule focused.
+- No user authentication / login accounts — local-only, single-profile design stands; this was reconsidered on 2026-09-12 after an MVP-readiness check flagged the absence of login, and explicitly declined again, since accounts would require a backend this project deliberately avoids (see Access Control).
 
 ## Open Questions
 
