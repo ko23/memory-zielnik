@@ -1,6 +1,6 @@
 # Discussion Log
 
-Append a structured record of the current turn — the user's prompt, any question(s) asked, the answer(s) given, and the resulting suggestion or action — to this project's running discussion log at `discussion-log/<YYYY-MM-DD>.md`.
+Append a structured record of the current turn — the user's prompt, any question(s) asked, the answer(s) given, the resulting suggestion or action, and the assistant's actual closing reply — to this project's running discussion log at `discussion-log/<YYYY-MM-DD>.md`.
 
 This is a durable audit trail of decisions made on this project, not a draft document. It is **append-only**: existing entries are never edited, reordered, or removed, even to fix a typo.
 
@@ -42,6 +42,8 @@ Append-only log of prompts, questions, answers, and suggestions from working ses
 - <question header>: <the option(s) selected, or the free-text answer>
 
 **Suggestion / Result:** <concrete outcome — files changed, decisions recorded, values set, or the assistant's recommendation. Name specifics, not a vague summary.>
+
+**Assistant reply:** <the actual closing chat message shown to the user this turn, verbatim or lightly trimmed for length — note "(trimmed)" if shortened>
 ```
 
 ## Field rules
@@ -50,6 +52,7 @@ Append-only log of prompts, questions, answers, and suggestions from working ses
 - Multi-question turns list every question/answer pair as its own bullet under the respective field, in the order asked.
 - Keep `Prompt` in the user's own words. Only trim for extreme length (e.g. a pasted file or long tool output), and say so.
 - `Suggestion / Result` should be concrete: name the files touched, the value changed, or the decision recorded — not "made some updates."
+- `Assistant reply` captures the actual final message displayed to the user this turn (e.g. "Done — three things happened: ..."), not a re-paraphrase of `Suggestion / Result`. If the reply was long (a full report, a large diff summary), reproduce it in full when reasonable; only trim for extreme length, and say so. If the closing reply and `Suggestion / Result` would be near-duplicates for a short/simple turn, it's fine for them to overlap — don't force artificial distinction.
 
 ## Guardrails
 
