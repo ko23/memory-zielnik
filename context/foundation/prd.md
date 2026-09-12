@@ -84,6 +84,8 @@ Plant-identification apps solve the wrong problem: they optimize for a single co
   > Socrates: Counter-argument considered: "letting players 'choose' who goes first could cause sibling friction/arguing instead of a quick setup step." Resolution: kept as written; no counter-argument accepted.
 - FR-012: When both players end the game with the same number of collected pairs, the end screen declares a tie rather than a winner. Priority: must-have
   > Socrates: Counter-argument considered: "a flat tie could feel anticlimactic for kids after a full game." Resolution: kept as written; no counter-argument accepted.
+- FR-013: User can edit an existing herb card's name and/or image; if the image is replaced, the new candidate goes through the same approve/reject flow as FR-002/FR-003 before it replaces the saved one. Priority: must-have
+  > Socrates: Counter-argument considered: "the flat access model means either player can edit any card unsupervised — a child could rename or swap a herb's image without the parent noticing." Resolution: kept as written; flat access already applies to card creation (FR-002), so editing under the same model is consistent, not a new risk. No confirmation step added.
 
 ## Non-Functional Requirements
 
