@@ -1,6 +1,6 @@
 ---
 project: "Herbs Masters Duel"
-version: 1
+version: 2
 status: draft
 created: 2026-09-09
 context_type: greenfield
@@ -86,6 +86,8 @@ Plant-identification apps solve the wrong problem: they optimize for a single co
   > Socrates: Counter-argument considered: "a flat tie could feel anticlimactic for kids after a full game." Resolution: kept as written; no counter-argument accepted.
 - FR-013: User can edit an existing herb card's name and/or image; if the image is replaced, the new candidate goes through the same approve/reject flow as FR-002/FR-003 before it replaces the saved one. Priority: must-have
   > Socrates: Counter-argument considered: "the flat access model means either player can edit any card unsupervised — a child could rename or swap a herb's image without the parent noticing." Resolution: kept as written; flat access already applies to card creation (FR-002), so editing under the same model is consistent, not a new risk. No confirmation step added.
+- FR-014: User can delete an existing herb card from the deck. Priority: must-have
+  > Socrates: Counter-argument considered: "deleting a card could drop the deck below the minimum 10 needed to start a game (FR-005), or remove a card mid-setup." Resolution: kept as written — FR-005 already caps the tile-pair count at the current deck size, so a shrunk deck is handled by existing setup validation, not a new rule here. Added on 2026-09-13 alongside FR-013's card-editing precedent, closing the gap that create/edit existed without a corresponding delete.
 
 ## Non-Functional Requirements
 

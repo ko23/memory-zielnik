@@ -4,7 +4,7 @@ version: 1
 status: draft
 created: 2026-09-13
 updated: 2026-09-13
-prd_version: 1
+prd_version: 2
 main_goal: speed
 top_blocker: time
 milestone_id: first-playable-duel
@@ -25,7 +25,7 @@ milestone_status: open
 - **Intent:** Ship the complete MVP loop the PRD defines as its single Primary Success Criterion — a user can author herb cards (looked-up image, human-approved) and two players can play a full memory-matching game to completion, with a winner/tie and score shown.
 - **Source materials:** `context/foundation/prd.md` (v1)
 - **Done when:** every F-NN and S-NN below is `done`.
-- **Scope anchors:** FR-001–FR-013, US-01
+- **Scope anchors:** FR-001–FR-014, US-01
 
 ## Vision recap
 
@@ -41,8 +41,8 @@ Parents teaching kids to recognize and use herbs have no good way to make the kn
 
 | ID   | Change ID                | Outcome (user can …)                                                                 | Prerequisites | PRD refs                          | Status   |
 | ---- | ------------------------ | ------------------------------------------------------------------------------------ | -------------- | ---------------------------------- | -------- |
-| F-01 | local-persistence-scaffold | (foundation) local save/load for the herb-card deck and player profile/scores        | —               | NFR (no data loss), Success Criteria (Secondary) | ready    |
-| S-01 | herb-card-authoring       | create, approve/reject, and edit herb cards with a looked-up image + source label     | F-01            | FR-001, FR-002, FR-003, FR-013     | proposed |
+| F-01 | local-persistence-scaffold | (foundation) local save/load for the herb-card deck and player profile/scores        | —               | NFR (no data loss), Success Criteria (Secondary) | in-progress |
+| S-01 | herb-card-authoring       | create, approve/reject, edit, and delete herb cards with a looked-up image + source label | F-01        | FR-001, FR-002, FR-003, FR-013, FR-014 | proposed |
 | S-02 | two-player-memory-match   | set up and play a full 2-player memory-matching game to completion, scores remembered | S-01, F-01      | US-01, FR-004–FR-012               | proposed |
 
 ## Baseline
@@ -61,24 +61,24 @@ Foundations below assume these are accurate and do NOT re-scaffold them.
 
 ### F-01: Local persistence scaffold
 
-- **Outcome:** (foundation) a minimal save/load contract exists (e.g. wrapping `localStorage` or IndexedDB) that can persist the herb-card deck and player profile/score records across a browser refresh or restart.
+- **Outcome:** (foundation) a minimal save/load contract exists (e.g. wrapping `localStorage` or IndexedDB) that can create, read, update, and delete herb-card deck entries and persist player profile/score records across a browser refresh or restart.
 - **Change ID:** local-persistence-scaffold
-- **PRD refs:** NFR "Authored herb cards and local profile data (progress, scores) survive a browser refresh or restart without loss"; Success Criteria (Secondary) "Scores are tracked across sessions"
+- **PRD refs:** NFR "Authored herb cards and local profile data (progress, scores) survive a browser refresh or restart without loss"; Success Criteria (Secondary) "Scores are tracked across sessions"; FR-014 (delete requires a corresponding storage primitive)
 - **Unlocks:** S-01 (deck must survive refresh), S-02 (player names/scores tracked across sessions)
 - **Prerequisites:** —
 - **Parallel with:** —
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Building one shared persistence contract before either slice means both S-01 and S-02 rely on it instead of inventing ad hoc storage twice — low risk, well-understood browser APIs, minimal scope.
-- **Status:** ready
+- **Status:** in-progress
 
 ## Slices
 
 ### S-01: Herb card authoring with image lookup and approval
 
-- **Outcome:** user can create a herb card (name + looked-up image + source/species label), approve or reject the looked-up image before it saves, and edit an existing card's name/image through the same approve/reject flow — reached from the starting menu.
+- **Outcome:** user can create a herb card (name + looked-up image + source/species label), approve or reject the looked-up image before it saves, edit an existing card's name/image through the same approve/reject flow, and delete an existing card from the deck — reached from the starting menu.
 - **Change ID:** herb-card-authoring
-- **PRD refs:** FR-001, FR-002, FR-003, FR-013
+- **PRD refs:** FR-001, FR-002, FR-003, FR-013, FR-014
 - **Prerequisites:** F-01
 - **Parallel with:** —
 - **Blockers:** —
@@ -104,7 +104,7 @@ Foundations below assume these are accurate and do NOT re-scaffold them.
 | Roadmap ID | Change ID                | Suggested issue title                                          | Ready for `/10x-plan` | Notes                    |
 | ---------- | ------------------------- | ---------------------------------------------------------------- | ---------------------- | ------------------------ |
 | F-01       | local-persistence-scaffold | Add local persistence scaffold for herb-card deck and player scores | yes                     | —                         |
-| S-01       | herb-card-authoring        | Herb card authoring: create, approve/reject image, edit           | no                      | Waiting on F-01           |
+| S-01       | herb-card-authoring        | Herb card authoring: create, approve/reject image, edit, delete    | no                      | Waiting on F-01           |
 | S-02       | two-player-memory-match    | Two-player memory match: setup through winner/tie screen           | no                      | Waiting on S-01, F-01     |
 
 ## Open Roadmap Questions
@@ -120,6 +120,7 @@ None — the PRD's own `## Open Questions` is empty, and no cross-cutting questi
 - **No user authentication / login accounts** — Why parked: PRD `## Non-Goals`; reconsidered and explicitly declined again on 2026-09-12 — accounts would require a backend this project deliberately avoids.
 - **Adaptive / spaced-repetition difficulty** — Why parked: `shape-notes.md`'s "Forward: technical-roadmap" — explicitly deferred as a later-version candidate, not part of this milestone.
 - **GitHub Actions auto-deploy-on-merge CI wiring** — Why parked: `tech-stack.md` names this as the intended flow, but no slice in this milestone depends on it; the manually-verified `wrangler deploy` pipeline is sufficient for MVP verification, and wiring CI now would spend time this crunch can't spare.
+- **Player-identity collision handling (same name, different people)** — Why parked: decided during F-01 planning (2026-09-13) to use the typed name as the identity key for MVP score history, accepting that two different people who type the same name share one record. Flagged as a post-MVP enhancement — e.g. a "new profile vs. continue" choice at setup — not required for the current milestone.
 
 ## Milestone History
 
