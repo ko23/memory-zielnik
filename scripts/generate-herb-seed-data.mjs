@@ -13,7 +13,7 @@ const OUTPUT_FILE = new URL("../src/lib/storage/seed-data.ts", import.meta.url);
 
 const RESIZE_WIDTH = 480;
 const JPEG_QUALITY = 75;
-const SOURCE_LABEL = "Wikipedia (GFDL)";
+const SOURCE_DIR_RELATIVE = "assets/herb-seed-sources";
 
 function titleFromFilename(filename) {
   return filename.replace(/\.jpg$/i, "").replace(/-/g, " ");
@@ -35,15 +35,15 @@ async function main() {
 
     entries.push({
       name: titleFromFilename(filename),
+      path: `${SOURCE_DIR_RELATIVE}/${filename}`,
       imageDataUrl: `data:image/jpeg;base64,${resized.toString("base64")}`,
-      sourceLabel: SOURCE_LABEL,
     });
   }
 
   const body = entries
     .map(
       (entry) =>
-        `  {\n    name: ${JSON.stringify(entry.name)},\n    imageDataUrl: ${JSON.stringify(entry.imageDataUrl)},\n    sourceLabel: ${JSON.stringify(entry.sourceLabel)},\n  },`,
+        `  {\n    name: ${JSON.stringify(entry.name)},\n    path: ${JSON.stringify(entry.path)},\n    imageDataUrl: ${JSON.stringify(entry.imageDataUrl)},\n  },`,
     )
     .join("\n");
 
@@ -53,8 +53,8 @@ async function main() {
 
 export interface HerbSeedCard {
   name: string;
+  path: string; // source file location, for traceability/regeneration only — never persisted onto a HerbCard
   imageDataUrl: string;
-  sourceLabel: string;
 }
 
 export const HERB_SEED_CARDS: HerbSeedCard[] = [

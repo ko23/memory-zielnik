@@ -13,7 +13,7 @@ export function seedDefaultCards(): void {
 
   for (const seedCard of HERB_SEED_CARDS) {
     try {
-      createCard(seedCard);
+      createCard({ name: seedCard.name, imageDataUrl: seedCard.imageDataUrl });
     } catch (error) {
       console.error(`seedDefaultCards: failed to create seed card "${seedCard.name}"`, error);
     }

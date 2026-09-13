@@ -50,7 +50,7 @@ export function listCards(): HerbCard[] {
 export function createCard(input: {
   name: string;
   imageDataUrl: string;
-  sourceLabel: string;
+  sourceLabel?: string;
 }): HerbCard {
   const now = new Date().toISOString();
   const card: HerbCard = {
