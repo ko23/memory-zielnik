@@ -209,20 +209,20 @@ Not applicable — this is a from-scratch module, no existing data to migrate. T
 
 #### Automated
 
-- [x] 1.1 Type checking passes
-- [x] 1.2 Build still succeeds
+- [x] 1.1 Type checking passes — 388a894
+- [x] 1.2 Build still succeeds — 388a894
 
 #### Manual
 
-- [x] 1.3 Console-level CRUD survives a refresh
+- [x] 1.3 Console-level CRUD survives a refresh — 388a894
 
 ### Phase 2: Resilience tests
 
 #### Automated
 
-- [ ] 2.1 Tests pass
-- [ ] 2.2 Build still succeeds
+- [x] 2.1 Tests pass
+- [x] 2.2 Build still succeeds
 
 #### Manual
 
-- [ ] 2.3 Manually corrupted storage key doesn't crash the app
+- [x] 2.3 Manually corrupted storage key doesn't crash the app
