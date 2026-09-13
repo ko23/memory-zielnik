@@ -1,7 +1,7 @@
 ---
 change_id: local-persistence-scaffold
 title: Local persistence scaffold
-status: implementing
+status: implemented
 created: 2026-09-13
 updated: 2026-09-13
 roadmap_id: F-01

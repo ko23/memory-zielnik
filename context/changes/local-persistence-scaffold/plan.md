@@ -220,9 +220,9 @@ Not applicable — this is a from-scratch module, no existing data to migrate. T
 
 #### Automated
 
-- [x] 2.1 Tests pass
-- [x] 2.2 Build still succeeds
+- [x] 2.1 Tests pass — 931bfd7
+- [x] 2.2 Build still succeeds — 931bfd7
 
 #### Manual
 
-- [x] 2.3 Manually corrupted storage key doesn't crash the app
+- [x] 2.3 Manually corrupted storage key doesn't crash the app — 931bfd7
