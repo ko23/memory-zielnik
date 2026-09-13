@@ -169,17 +169,17 @@ Not applicable — this only adds new cards to an empty deck; it never touches o
 
 #### Automated
 
-- [x] 1.1 Generation script runs cleanly
-- [x] 1.2 Type checking passes
-- [x] 1.3 Build still succeeds
+- [x] 1.1 Generation script runs cleanly — 3ba36d2
+- [x] 1.2 Type checking passes — 3ba36d2
+- [x] 1.3 Build still succeeds — 3ba36d2
 
 #### Manual
 
-- [x] 1.4 Spot-checked generated images render correctly
+- [x] 1.4 Spot-checked generated images render correctly — 3ba36d2
 
 ### Phase 2: Seeding function + tests
 
 #### Automated
 
-- [ ] 2.1 Tests pass
-- [ ] 2.2 Build still succeeds
+- [x] 2.1 Tests pass
+- [x] 2.2 Build still succeeds
