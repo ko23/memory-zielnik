@@ -1,7 +1,7 @@
 ---
 change_id: unified-starter-cards
 title: Unified starter cards
-status: implemented
+status: impl_reviewed
 created: 2026-09-14
 updated: 2026-09-14
 ---
