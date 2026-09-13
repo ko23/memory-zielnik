@@ -1,7 +1,7 @@
 ---
 change_id: herb-seed-cards
 title: Herb seed cards
-status: implementing
+status: implemented
 created: 2026-09-13
 updated: 2026-09-13
 ---

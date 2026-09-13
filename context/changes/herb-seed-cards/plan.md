@@ -181,5 +181,5 @@ Not applicable — this only adds new cards to an empty deck; it never touches o
 
 #### Automated
 
-- [x] 2.1 Tests pass
-- [x] 2.2 Build still succeeds
+- [x] 2.1 Tests pass — 1355441
+- [x] 2.2 Build still succeeds — 1355441
