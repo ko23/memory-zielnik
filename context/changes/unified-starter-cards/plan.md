@@ -162,4 +162,4 @@ Not applicable — no deployed data exists in the old seed shape (nothing has ev
 
 #### Manual
 
-- [x] 2.1 Corrected paragraph accurately reflects the post-change state
+- [x] 2.1 Corrected paragraph accurately reflects the post-change state — b356c1c
