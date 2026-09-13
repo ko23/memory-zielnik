@@ -153,13 +153,13 @@ Not applicable — no deployed data exists in the old seed shape (nothing has ev
 
 #### Automated
 
-- [x] 1.1 Generator runs cleanly
-- [x] 1.2 Tests pass
-- [x] 1.3 Type checking passes
-- [x] 1.4 Build still succeeds
+- [x] 1.1 Generator runs cleanly — 42c0b8a
+- [x] 1.2 Tests pass — 42c0b8a
+- [x] 1.3 Type checking passes — 42c0b8a
+- [x] 1.4 Build still succeeds — 42c0b8a
 
 ### Phase 2: Amend herb-card-authoring/plan.md
 
 #### Manual
 
-- [ ] 2.1 Corrected paragraph accurately reflects the post-change state
+- [x] 2.1 Corrected paragraph accurately reflects the post-change state

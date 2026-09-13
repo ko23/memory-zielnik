@@ -27,7 +27,7 @@ Visiting the deployed site shows a starting menu (Create Cards / Play Game [disa
 - No actual "Play Game" screen — the button exists and is disabled/"coming soon"; `S-02` builds its real behavior.
 - No confirmation step for edit (matching FR-013's existing precedent) — only delete gets a confirmation, per this session's decision.
 - No offline/service-worker image caching beyond what's already stored as base64 in `localStorage` — a lookup requires a live network connection to Wikipedia.
-- No changes to `F-01`'s `index.ts`/`adapter.ts` contracts, or to `herb-seed-cards`' `seed-data.ts`/`seed.ts` — this change only calls `seedDefaultCards()`, it doesn't modify it.
+- No further changes to `F-01`'s `index.ts`/`adapter.ts` contracts beyond what `unified-starter-cards` already landed (`HerbCard.sourceLabel` and `createCard`'s input are now optional, so starter cards don't need a meaningless attribution placeholder) — this change still only calls `seedDefaultCards()`, it doesn't modify `seed-data.ts`/`seed.ts` itself. Phases 3-4's own `createCard`/`updateCard` calls always pass a real `sourceLabel` from a Wikipedia lookup, so the widened-but-not-narrowed contract doesn't affect them.
 
 ## Implementation Approach
 
@@ -285,14 +285,14 @@ Not applicable — this only adds new cards via user action or the existing `see
 
 #### Automated
 
-- [x] 1.1 Tests pass
-- [x] 1.2 Type checking passes
-- [x] 1.3 Build still succeeds
+- [x] 1.1 Tests pass — ae182de
+- [x] 1.2 Type checking passes — ae182de
+- [x] 1.3 Build still succeeds — ae182de
 
 #### Manual
 
-- [x] 1.4 Live lookup smoke-test returns a real image URL
-- [x] 1.5 Resize helper produces a legible, appropriately-sized image
+- [x] 1.4 Live lookup smoke-test returns a real image URL — ae182de
+- [x] 1.5 Resize helper produces a legible, appropriately-sized image — ae182de
 
 ### Phase 2: Menu + card list
 
