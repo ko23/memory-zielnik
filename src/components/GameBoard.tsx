@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { listCards } from "../lib/storage";
 import {
   createGameState,
+  getGridDimensions,
   pickRandomSubset,
   resolveMismatch,
   selectTile,
@@ -46,6 +47,8 @@ export function GameBoard({ players, pairCount, startingPlayer, onFinished }: Ga
     setState((current) => selectTile(current, index));
   }
 
+  const { columns } = getGridDimensions(state.tiles.length);
+
   return (
     <div>
       <p>
@@ -54,7 +57,7 @@ export function GameBoard({ players, pairCount, startingPlayer, onFinished }: Ga
       <p>
         {players[1]}: {state.scores[1]} pairs {state.currentPlayer === 1 ? "— current turn" : ""}
       </p>
-      <div>
+      <div className={styles.grid} style={{ gridTemplateColumns: `repeat(${columns}, 150px)` }}>
         {state.tiles.map((tile, index) => {
           const faceUp = tile.matched || state.selected.includes(index);
           const card = cardsById.get(tile.cardId);

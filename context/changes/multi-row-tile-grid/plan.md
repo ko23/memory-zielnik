@@ -160,23 +160,23 @@ Not applicable — no data model or storage changes.
 
 #### Automated
 
-- [x] 1.1 Tests pass
-- [x] 1.2 Type checking passes
-- [x] 1.3 Build still succeeds
+- [x] 1.1 Tests pass — 4266bf7
+- [x] 1.2 Type checking passes — 4266bf7
+- [x] 1.3 Build still succeeds — 4266bf7
 
 ### Phase 2: Wire the grid into GameBoard
 
 #### Automated
 
-- [ ] 2.1 Type checking passes
-- [ ] 2.2 Build still succeeds
-- [ ] 2.3 Full test suite passes
+- [x] 2.1 Type checking passes
+- [x] 2.2 Build still succeeds
+- [x] 2.3 Full test suite passes
 
 #### Manual
 
-- [ ] 2.4 10 pairs renders a clean 4x5 grid
-- [ ] 2.5 12 pairs renders a clean 3x8 grid
-- [ ] 2.6 17 pairs renders a 4x9 grid with a ragged last row
-- [ ] 2.7 24 pairs renders a 3x16 grid with horizontal scroll, no page overflow
-- [ ] 2.8 Gap and unified tile size unchanged in every state
-- [ ] 2.9 No regression in match/mismatch/turn-passing/game completion
+- [x] 2.4 10 pairs renders a clean 4x5 grid
+- [x] 2.5 12 pairs renders a clean 3x8 grid
+- [x] 2.6 17 pairs renders a 4x9 grid with a ragged last row
+- [x] 2.7 24 pairs renders a 3x16 grid with horizontal scroll, no page overflow
+- [x] 2.8 Gap and unified tile size unchanged in every state
+- [x] 2.9 No regression in match/mismatch/turn-passing/game completion
