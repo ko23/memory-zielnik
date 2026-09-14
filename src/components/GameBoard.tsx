@@ -68,6 +68,8 @@ export function GameBoard({ players, pairCount, startingPlayer, onFinished }: Ga
               className={`${styles.tile}${tile.matched ? ` ${styles.tileMatched}` : ""}`}
               onClick={() => handleTileClick(index)}
               disabled={tile.matched || state.phase !== "selecting" || state.selected.includes(index)}
+              data-testid="tile"
+              data-card-id={tile.cardId}
             >
               {faceUp && card ? (
                 <>
