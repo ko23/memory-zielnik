@@ -326,12 +326,12 @@ Not applicable — this only adds new cards via user action or the existing `see
 
 #### Automated
 
-- [x] 4.1 Type checking passes
-- [x] 4.2 Build still succeeds
-- [x] 4.3 Full test suite passes
+- [x] 4.1 Type checking passes — e52dcb6
+- [x] 4.2 Build still succeeds — e52dcb6
+- [x] 4.3 Full test suite passes — e52dcb6
 
 #### Manual
 
-- [x] 4.4 Rename-only edit preserves the image
-- [x] 4.5 Rename-with-new-image edit replaces in place (no duplicate)
-- [x] 4.6 Delete confirm/cancel/confirm-yes all behave correctly
+- [x] 4.4 Rename-only edit preserves the image — e52dcb6
+- [x] 4.5 Rename-with-new-image edit replaces in place (no duplicate) — e52dcb6
+- [x] 4.6 Delete confirm/cancel/confirm-yes all behave correctly — e52dcb6
