@@ -62,7 +62,7 @@ export function GameBoard({ players, pairCount, startingPlayer, onFinished }: Ga
             <button
               key={index}
               type="button"
-              className={`${styles.tile} ${tile.matched ? styles.tileMatched : ""}`}
+              className={`${styles.tile}${tile.matched ? ` ${styles.tileMatched}` : ""}`}
               onClick={() => handleTileClick(index)}
               disabled={tile.matched || state.phase !== "selecting" || state.selected.includes(index)}
             >
