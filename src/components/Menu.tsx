@@ -1,11 +1,17 @@
 import { useState } from "react";
+import { listCards } from "../lib/storage";
+
+const MIN_CARDS_TO_PLAY = 10;
 
 interface MenuProps {
   onCreateCards: () => void;
+  onPlayGame: () => void;
 }
 
-export function Menu({ onCreateCards }: MenuProps) {
+export function Menu({ onCreateCards, onPlayGame }: MenuProps) {
   const [exited, setExited] = useState(false);
+  const deckSize = listCards().length;
+  const canPlay = deckSize >= MIN_CARDS_TO_PLAY;
 
   if (exited) {
     return (
@@ -22,7 +28,12 @@ export function Menu({ onCreateCards }: MenuProps) {
         <button type="button" onClick={onCreateCards}>
           Create Cards
         </button>
-        <button type="button" disabled title="Coming soon">
+        <button
+          type="button"
+          onClick={onPlayGame}
+          disabled={!canPlay}
+          title={canPlay ? undefined : `Add at least ${MIN_CARDS_TO_PLAY} cards to play (${deckSize} so far)`}
+        >
           Play Game
         </button>
         <button type="button" onClick={() => setExited(true)}>

@@ -54,6 +54,7 @@ export function CardManager({ onBack }: CardManagerProps) {
         Back to menu
       </button>
       <h2>Herb Cards</h2>
+      <p>Deck cards: {cards.length}</p>
       <button type="button" onClick={() => setAdding(true)}>
         Add card
       </button>
@@ -62,7 +63,6 @@ export function CardManager({ onBack }: CardManagerProps) {
           <li key={card.id}>
             <img src={card.imageDataUrl} alt={card.name} width={80} />
             <span>{card.name}</span>
-            {card.sourceLabel ? <span> — {card.sourceLabel}</span> : null}
             {confirmingDeleteId === card.id ? (
               <span>
                 {" "}

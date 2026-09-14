@@ -255,23 +255,23 @@ Not applicable — no existing data shape changes; this only adds new `GameResul
 
 #### Automated
 
-- [x] 1.1 Tests pass
-- [x] 1.2 Type checking passes
-- [x] 1.3 Build still succeeds
+- [x] 1.1 Tests pass — 4d0e1ed
+- [x] 1.2 Type checking passes — 4d0e1ed
+- [x] 1.3 Build still succeeds — 4d0e1ed
 
 ### Phase 2: Setup screen
 
 #### Automated
 
-- [ ] 2.1 Type checking passes
-- [ ] 2.2 Build still succeeds
+- [x] 2.1 Type checking passes
+- [x] 2.2 Build still succeeds
 
 #### Manual
 
-- [ ] 2.3 Play Game disabled under 10 cards, enabled at 10+
-- [ ] 2.4 Setup steps (names, count, who-goes-first) flow correctly
-- [ ] 2.5 Same-name entry shows suffixed identities from who-goes-first onward
-- [ ] 2.6 (optional, non-blocking) Coin-flip button animates and starts the game with its picked player
+- [x] 2.3 Play Game disabled under 10 cards, enabled at 10+
+- [x] 2.4 Setup steps (names, count, who-goes-first) flow correctly
+- [x] 2.5 Same-name entry shows suffixed identities from who-goes-first onward
+- [x] 2.6 (optional, non-blocking) Coin-flip button animates and starts the game with its picked player
 
 ### Phase 3: Game board
 
