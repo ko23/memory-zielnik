@@ -298,29 +298,29 @@ Not applicable — this only adds new cards via user action or the existing `see
 
 #### Automated
 
-- [x] 2.1 Type checking passes
-- [x] 2.2 Build still succeeds
+- [x] 2.1 Type checking passes — a7992f1
+- [x] 2.2 Build still succeeds — a7992f1
 
 #### Manual
 
-- [x] 2.3 Menu shows instead of the Astro scaffold
-- [x] 2.4 Create Cards shows all 14 seed cards on first visit
-- [x] 2.5 Refresh does not re-seed or duplicate cards
-- [x] 2.6 Play Game is disabled; Exit shows the close-tab message
+- [x] 2.3 Menu shows instead of the Astro scaffold — a7992f1
+- [x] 2.4 Create Cards shows all 14 seed cards on first visit — a7992f1
+- [x] 2.5 Refresh does not re-seed or duplicate cards — a7992f1
+- [x] 2.6 Play Game is disabled; Exit shows the close-tab message — a7992f1
 
 ### Phase 3: Create flow
 
 #### Automated
 
-- [ ] 3.1 Type checking passes
-- [ ] 3.2 Build still succeeds
+- [x] 3.1 Type checking passes
+- [x] 3.2 Build still succeeds
 
 #### Manual
 
-- [ ] 3.3 Add a card end-to-end; it appears in the list after approval
-- [ ] 3.4 Reject returns to name entry with the name preserved
-- [ ] 3.5 No-match name shows a clean not-found state
-- [ ] 3.6 New card persists across a refresh
+- [x] 3.3 Add a card end-to-end; it appears in the list after approval
+- [x] 3.4 Reject returns to name entry with the name preserved
+- [x] 3.5 No-match name shows a clean not-found state
+- [x] 3.6 New card persists across a refresh
 
 ### Phase 4: Edit + delete
 

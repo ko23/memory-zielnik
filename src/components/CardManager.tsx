@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { listCards, type HerbCard } from "../lib/storage";
+import { CardForm } from "./CardForm";
 
 interface CardManagerProps {
   onBack: () => void;
@@ -7,10 +8,27 @@ interface CardManagerProps {
 
 export function CardManager({ onBack }: CardManagerProps) {
   const [cards, setCards] = useState<HerbCard[]>([]);
+  const [adding, setAdding] = useState(false);
 
   useEffect(() => {
-    setCards(listCards());
+    refreshCards();
   }, []);
+
+  function refreshCards() {
+    setCards(listCards());
+  }
+
+  if (adding) {
+    return (
+      <CardForm
+        onDone={() => {
+          setAdding(false);
+          refreshCards();
+        }}
+        onCancel={() => setAdding(false)}
+      />
+    );
+  }
 
   return (
     <div>
@@ -18,6 +36,9 @@ export function CardManager({ onBack }: CardManagerProps) {
         Back to menu
       </button>
       <h2>Herb Cards</h2>
+      <button type="button" onClick={() => setAdding(true)}>
+        Add card
+      </button>
       <ul>
         {cards.map((card) => (
           <li key={card.id}>
