@@ -129,3 +129,14 @@ export function getWinner(state: GameState): 0 | 1 | "tie" | null {
 export function flipCoin(): 0 | 1 {
   return Math.random() < 0.5 ? 0 : 1;
 }
+
+export interface GridDimensions {
+  rows: number;
+  columns: number;
+}
+
+export function getGridDimensions(tileCount: number): GridDimensions {
+  const rows = tileCount % 3 === 0 ? 3 : 4;
+  const columns = Math.ceil(tileCount / rows);
+  return { rows, columns };
+}

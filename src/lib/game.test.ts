@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   createGameState,
   flipCoin,
+  getGridDimensions,
   getWinner,
   pickRandomSubset,
   resolveMismatch,
@@ -147,5 +148,26 @@ describe("flipCoin", () => {
     const results = new Set(Array.from({ length: 100 }, () => flipCoin()));
     expect([...results].every((value) => value === 0 || value === 1)).toBe(true);
     expect(results.size).toBe(2);
+  });
+});
+
+describe("getGridDimensions", () => {
+  it("uses 4 rows and a clean column count when tile count isn't divisible by 3 (10 pairs -> 20 tiles)", () => {
+    expect(getGridDimensions(20)).toEqual({ rows: 4, columns: 5 });
+  });
+
+  it("uses 3 rows and a clean column count when tile count is divisible by 3 (12 pairs -> 24 tiles)", () => {
+    expect(getGridDimensions(24)).toEqual({ rows: 3, columns: 8 });
+  });
+
+  it("uses 4 rows with a ragged last row when tile count isn't divisible by 3 (17 pairs -> 34 tiles)", () => {
+    const { rows, columns } = getGridDimensions(34);
+    expect(rows).toBe(4);
+    expect(columns).toBe(9);
+    expect(rows * columns).toBeGreaterThan(34); // confirms the last row is ragged, not exact
+  });
+
+  it("uses 3 rows and a clean column count at the widest case (24 pairs -> 48 tiles)", () => {
+    expect(getGridDimensions(48)).toEqual({ rows: 3, columns: 16 });
   });
 });
