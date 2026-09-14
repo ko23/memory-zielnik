@@ -263,29 +263,29 @@ Not applicable — no existing data shape changes; this only adds new `GameResul
 
 #### Automated
 
-- [x] 2.1 Type checking passes
-- [x] 2.2 Build still succeeds
+- [x] 2.1 Type checking passes — 86c50d3
+- [x] 2.2 Build still succeeds — 86c50d3
 
 #### Manual
 
-- [x] 2.3 Play Game disabled under 10 cards, enabled at 10+
-- [x] 2.4 Setup steps (names, count, who-goes-first) flow correctly
-- [x] 2.5 Same-name entry shows suffixed identities from who-goes-first onward
-- [x] 2.6 (optional, non-blocking) Coin-flip button animates and starts the game with its picked player
+- [x] 2.3 Play Game disabled under 10 cards, enabled at 10+ — 86c50d3
+- [x] 2.4 Setup steps (names, count, who-goes-first) flow correctly — 86c50d3
+- [x] 2.5 Same-name entry shows suffixed identities from who-goes-first onward — 86c50d3
+- [x] 2.6 (optional, non-blocking) Coin-flip button animates and starts the game with its picked player — 86c50d3
 
 ### Phase 3: Game board
 
 #### Automated
 
-- [ ] 3.1 Type checking passes
-- [ ] 3.2 Build still succeeds
+- [x] 3.1 Type checking passes
+- [x] 3.2 Build still succeeds
 
 #### Manual
 
-- [ ] 3.3 Tile flip is instant, no artificial delay
-- [ ] 3.4 Match keeps turn and updates live score
-- [ ] 3.5 Mismatch reveals briefly, blocks input, then flips back and passes turn
-- [ ] 3.6 Full board completion transitions to end screen
+- [x] 3.3 Tile flip is instant, no artificial delay
+- [x] 3.4 Match keeps turn and updates live score
+- [x] 3.5 Mismatch reveals briefly, blocks input, then flips back and passes turn
+- [x] 3.6 Full board completion transitions to end screen
 
 ### Phase 4: End screen + wiring
 
