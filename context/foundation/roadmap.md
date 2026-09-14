@@ -42,7 +42,7 @@ Parents teaching kids to recognize and use herbs have no good way to make the kn
 | ID   | Change ID                | Outcome (user can …)                                                                 | Prerequisites | PRD refs                          | Status   |
 | ---- | ------------------------ | ------------------------------------------------------------------------------------ | -------------- | ---------------------------------- | -------- |
 | F-01 | local-persistence-scaffold | (foundation) local save/load for the herb-card deck and player profile/scores        | —               | NFR (no data loss), Success Criteria (Secondary) | in-progress |
-| S-01 | herb-card-authoring       | create, approve/reject, edit, and delete herb cards with a looked-up image + source label | F-01        | FR-001, FR-002, FR-003, FR-013, FR-014 | proposed |
+| S-01 | herb-card-authoring       | create, approve/reject, edit, and delete herb cards with a looked-up image + source label | F-01        | FR-001, FR-002, FR-003, FR-013, FR-014 | in-progress |
 | S-02 | two-player-memory-match   | set up and play a full 2-player memory-matching game to completion, scores remembered | S-01, F-01      | US-01, FR-004–FR-012               | proposed |
 
 ## Baseline
@@ -82,10 +82,9 @@ Foundations below assume these are accurate and do NOT re-scaffold them.
 - **Prerequisites:** F-01
 - **Parallel with:** —
 - **Blockers:** —
-- **Unknowns:**
-  - Which public reference source/API to use for herb image lookup (e.g. Wikipedia REST API, iNaturalist, GBIF)? — Owner: team. Block: no.
+- **Unknowns:** — (resolved during `/10x-plan`: Polish Wikipedia REST API's page-summary endpoint, chosen for CORS-friendly anonymous fetch and consistency with `herb-seed-cards`' image provenance — see `context/changes/herb-card-authoring/plan.md`)
 - **Risk:** Sequenced first because S-02 (the north star) depends on it — cards must exist before a game can be played — and it carries the riskiest technical unknown in the whole product (image-lookup accuracy); better to hit that early regardless of which slice validates the core hypothesis.
-- **Status:** proposed
+- **Status:** in-progress
 
 ### S-02: Two-player memory match to completion
 
