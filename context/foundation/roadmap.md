@@ -3,7 +3,7 @@ project: "Herbs Masters Duel"
 version: 1
 status: draft
 created: 2026-09-13
-updated: 2026-09-13
+updated: 2026-09-14
 prd_version: 2
 main_goal: speed
 top_blocker: time
@@ -43,7 +43,7 @@ Parents teaching kids to recognize and use herbs have no good way to make the kn
 | ---- | ------------------------ | ------------------------------------------------------------------------------------ | -------------- | ---------------------------------- | -------- |
 | F-01 | local-persistence-scaffold | (foundation) local save/load for the herb-card deck and player profile/scores        | —               | NFR (no data loss), Success Criteria (Secondary) | in-progress |
 | S-01 | herb-card-authoring       | create, approve/reject, edit, and delete herb cards with a looked-up image + source label | F-01        | FR-001, FR-002, FR-003, FR-013, FR-014 | in-progress |
-| S-02 | two-player-memory-match   | set up and play a full 2-player memory-matching game to completion, scores remembered | S-01, F-01      | US-01, FR-004–FR-012               | proposed |
+| S-02 | two-player-memory-match   | set up and play a full 2-player memory-matching game to completion, scores remembered | S-01, F-01      | US-01, FR-004–FR-012               | in-progress |
 
 ## Baseline
 
@@ -96,7 +96,7 @@ Foundations below assume these are accurate and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** This is the north star — the PRD's single Primary Success Criterion and the flow that actually tests whether the memory mechanic produces retention. Built as one continuous flow by design — setup, turn mechanics, and the end screen are one testable session per the PRD's own single User Story (US-01); splitting it further would produce pieces that aren't independently meaningful to play or verify.
-- **Status:** proposed
+- **Status:** in-progress
 
 ## Backlog Handoff
 
@@ -104,7 +104,7 @@ Foundations below assume these are accurate and do NOT re-scaffold them.
 | ---------- | ------------------------- | ---------------------------------------------------------------- | ---------------------- | ------------------------ |
 | F-01       | local-persistence-scaffold | Add local persistence scaffold for herb-card deck and player scores | yes                     | —                         |
 | S-01       | herb-card-authoring        | Herb card authoring: create, approve/reject image, edit, delete    | no                      | Waiting on F-01           |
-| S-02       | two-player-memory-match    | Two-player memory match: setup through winner/tie screen           | no                      | Waiting on S-01, F-01     |
+| S-02       | two-player-memory-match    | Two-player memory match: setup through winner/tie screen           | yes                     | —                         |
 
 ## Open Roadmap Questions
 
@@ -119,7 +119,6 @@ None — the PRD's own `## Open Questions` is empty, and no cross-cutting questi
 - **No user authentication / login accounts** — Why parked: PRD `## Non-Goals`; reconsidered and explicitly declined again on 2026-09-12 — accounts would require a backend this project deliberately avoids.
 - **Adaptive / spaced-repetition difficulty** — Why parked: `shape-notes.md`'s "Forward: technical-roadmap" — explicitly deferred as a later-version candidate, not part of this milestone.
 - **GitHub Actions auto-deploy-on-merge CI wiring** — Why parked: `tech-stack.md` names this as the intended flow, but no slice in this milestone depends on it; the manually-verified `wrangler deploy` pipeline is sufficient for MVP verification, and wiring CI now would spend time this crunch can't spare.
-- **Player-identity collision handling (same name, different people)** — Why parked: decided during F-01 planning (2026-09-13) to use the typed name as the identity key for MVP score history, accepting that two different people who type the same name share one record. Flagged as a post-MVP enhancement — e.g. a "new profile vs. continue" choice at setup — not required for the current milestone.
 
 ## Milestone History
 
