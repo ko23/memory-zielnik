@@ -298,15 +298,15 @@ Not applicable — this only adds new cards via user action or the existing `see
 
 #### Automated
 
-- [ ] 2.1 Type checking passes
-- [ ] 2.2 Build still succeeds
+- [x] 2.1 Type checking passes
+- [x] 2.2 Build still succeeds
 
 #### Manual
 
-- [ ] 2.3 Menu shows instead of the Astro scaffold
-- [ ] 2.4 Create Cards shows all 14 seed cards on first visit
-- [ ] 2.5 Refresh does not re-seed or duplicate cards
-- [ ] 2.6 Play Game is disabled; Exit shows the close-tab message
+- [x] 2.3 Menu shows instead of the Astro scaffold
+- [x] 2.4 Create Cards shows all 14 seed cards on first visit
+- [x] 2.5 Refresh does not re-seed or duplicate cards
+- [x] 2.6 Play Game is disabled; Exit shows the close-tab message
 
 ### Phase 3: Create flow
 
