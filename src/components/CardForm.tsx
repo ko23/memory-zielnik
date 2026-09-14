@@ -6,7 +6,8 @@ import { createCard, updateCard, type HerbCard } from "../lib/storage";
 type FormState =
   | { step: "entry"; name: string; notFound: boolean }
   | { step: "looking-up"; name: string }
-  | { step: "approve"; name: string; imageUrl: string; sourceLabel: string };
+  | { step: "approve"; name: string; imageUrl: string; sourceLabel: string }
+  | { step: "saving"; name: string };
 
 interface CardFormProps {
   existingCard?: HerbCard;
@@ -36,8 +37,12 @@ export function CardForm({ existingCard, onDone, onCancel }: CardFormProps) {
       return;
     }
     const { name, imageUrl, sourceLabel } = state;
+    setState({ step: "saving", name });
     try {
       const imageDataUrl = await urlToResizedDataUrl(imageUrl);
+      // sourceLabel is always populated here via lookupHerbImage — this is
+      // the one call site where it's intentionally always included, not
+      // omitted (see context/foundation/lessons.md).
       if (existingCard) {
         updateCard(existingCard.id, { name, imageDataUrl, sourceLabel });
       } else {
@@ -72,6 +77,10 @@ export function CardForm({ existingCard, onDone, onCancel }: CardFormProps) {
 
   if (state.step === "looking-up") {
     return <p>Looking up “{state.name}”…</p>;
+  }
+
+  if (state.step === "saving") {
+    return <p>Saving “{state.name}”…</p>;
   }
 
   if (state.step === "approve") {

@@ -39,7 +39,12 @@ export function CardManager({ onBack }: CardManagerProps) {
 
   if (adding || editingCard) {
     return (
-      <CardForm existingCard={editingCard ?? undefined} onDone={handleFormDone} onCancel={handleFormCancel} />
+      <CardForm
+        key={editingCard?.id ?? "new"}
+        existingCard={editingCard ?? undefined}
+        onDone={handleFormDone}
+        onCancel={handleFormCancel}
+      />
     );
   }
 
