@@ -118,12 +118,12 @@ Not applicable — no data model or storage changes.
 
 #### Automated
 
-- [x] 1.1 Type checking passes
-- [x] 1.2 Build still succeeds
+- [x] 1.1 Type checking passes — 484b20a
+- [x] 1.2 Build still succeeds — 484b20a
 
 #### Manual
 
-- [x] 1.3 Face-down, face-up, and matched tiles all measure the same size
-- [x] 1.4 Short-named and long-named cards produce identically sized tiles (text wraps/clips, doesn't grow the tile)
-- [x] 1.5 Matched tiles are dimmed but same footprint, same position
-- [x] 1.6 No regression in match/mismatch/turn-passing/game completion
+- [x] 1.3 Face-down, face-up, and matched tiles all measure the same size — 484b20a
+- [x] 1.4 Short-named and long-named cards produce identically sized tiles (text wraps/clips, doesn't grow the tile) — 484b20a
+- [x] 1.5 Matched tiles are dimmed but same footprint, same position — 484b20a
+- [x] 1.6 No regression in match/mismatch/turn-passing/game completion — 484b20a

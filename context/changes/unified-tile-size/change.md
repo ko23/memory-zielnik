@@ -1,7 +1,7 @@
 ---
 change_id: unified-tile-size
 title: Unified tile size
-status: implementing
+status: implemented
 created: 2026-09-14
 updated: 2026-09-14
 roadmap_id: null
