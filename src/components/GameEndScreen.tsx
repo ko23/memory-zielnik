@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { appendGameResult, getPlayerHistory, type GameResult } from "../lib/storage";
 import { getWinner, type GameState } from "../lib/game";
 
@@ -13,8 +13,12 @@ function bestScore(history: GameResult[]): number {
 
 export function GameEndScreen({ finalState, onBackToMenu }: GameEndScreenProps) {
   const winner = getWinner(finalState);
+  const hasRecordedRef = useRef(false);
+  const [history, setHistory] = useState<[GameResult[], GameResult[]] | null>(null);
 
-  const [history] = useState<[GameResult[], GameResult[]]>(() => {
+  useEffect(() => {
+    if (hasRecordedRef.current) return;
+    hasRecordedRef.current = true;
     const playedAt = new Date().toISOString();
     ([0, 1] as const).forEach((i) => {
       appendGameResult(finalState.players[i], {
@@ -24,8 +28,13 @@ export function GameEndScreen({ finalState, onBackToMenu }: GameEndScreenProps) 
         outcome: winner === "tie" ? "tie" : winner === i ? "win" : "loss",
       });
     });
-    return [getPlayerHistory(finalState.players[0]), getPlayerHistory(finalState.players[1])];
-  });
+    setHistory([getPlayerHistory(finalState.players[0]), getPlayerHistory(finalState.players[1])]);
+    // finalState/winner are fixed for this component's lifetime — the guard
+    // above is what actually prevents a double append, not this dep array.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (!history) return null;
 
   return (
     <div>

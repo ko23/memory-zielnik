@@ -240,6 +240,15 @@ Tile flips must be instant (no async work in the hot path) to meet the PRD's 100
 
 Not applicable — no existing data shape changes; this only adds new `GameResult` entries via the already-existing `appendGameResult`.
 
+## Addenda
+
+Two small `CardManager.tsx` tweaks were requested by the user mid-session (outside this plan's original "Changes Required") and folded into the Phase 2 commit (`86c50d3`), disclosed in that commit's message:
+
+- A live "Deck cards: N" count display, shown above the "Add card" button.
+- Removal of the `sourceLabel` suffix (e.g. "— Wikipedia") from the card list — it now shows only image + name.
+
+Both are presentational-only, touch no state/props/contracts, and nothing else in this plan depends on either. Flagged during full-plan review (`reviews/impl-review.md` F3) as undocumented scope; this section closes that gap.
+
 ## References
 
 - Prior work: `context/changes/local-persistence-scaffold/plan.md` (`F-01` — `GameResult`/`appendGameResult`/`getPlayerHistory`, already built and tested, first used here)

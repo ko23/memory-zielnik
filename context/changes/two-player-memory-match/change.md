@@ -1,7 +1,7 @@
 ---
 change_id: two-player-memory-match
 title: Two-player memory match
-status: implemented
+status: impl_reviewed
 created: 2026-09-14
 updated: 2026-09-14
 roadmap_id: S-02

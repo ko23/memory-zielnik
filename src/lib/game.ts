@@ -1,3 +1,5 @@
+import { samePlayerName } from "./identity";
+
 export interface Tile {
   cardId: string;
   matched: boolean;
@@ -12,10 +14,6 @@ export interface GameState {
   scores: [number, number]; // pairs collected, indexed by player
   currentPlayer: 0 | 1;
   phase: GamePhase;
-}
-
-function samePlayerName(a: string, b: string): boolean {
-  return a.trim().toLowerCase() === b.trim().toLowerCase();
 }
 
 export function resolvePlayerNames(name1: string, name2: string): [string, string] {

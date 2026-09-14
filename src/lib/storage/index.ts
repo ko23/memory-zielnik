@@ -1,4 +1,5 @@
 import { readEnvelope, writeEnvelope } from "./adapter";
+import { samePlayerName } from "../identity";
 import type { HerbCard, GameResult, PlayerRecord } from "./types";
 
 export type { HerbCard, GameResult, PlayerRecord } from "./types";
@@ -37,10 +38,6 @@ function persistPlayers(): void {
   if (playersCache !== null) {
     writeEnvelope(PLAYERS_KEY, SCHEMA_VERSION, playersCache);
   }
-}
-
-function samePlayerName(a: string, b: string): boolean {
-  return a.trim().toLowerCase() === b.trim().toLowerCase();
 }
 
 export function listCards(): HerbCard[] {
