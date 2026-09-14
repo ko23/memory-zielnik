@@ -277,27 +277,27 @@ Not applicable — no existing data shape changes; this only adds new `GameResul
 
 #### Automated
 
-- [x] 3.1 Type checking passes
-- [x] 3.2 Build still succeeds
+- [x] 3.1 Type checking passes — de8f527
+- [x] 3.2 Build still succeeds — de8f527
 
 #### Manual
 
-- [x] 3.3 Tile flip is instant, no artificial delay
-- [x] 3.4 Match keeps turn and updates live score
-- [x] 3.5 Mismatch reveals briefly, blocks input, then flips back and passes turn
-- [x] 3.6 Full board completion transitions to end screen
+- [x] 3.3 Tile flip is instant, no artificial delay — de8f527
+- [x] 3.4 Match keeps turn and updates live score — de8f527
+- [x] 3.5 Mismatch reveals briefly, blocks input, then flips back and passes turn — de8f527
+- [x] 3.6 Full board completion transitions to end screen — de8f527
 
 ### Phase 4: End screen + wiring
 
 #### Automated
 
-- [ ] 4.1 Type checking passes
-- [ ] 4.2 Build still succeeds
-- [ ] 4.3 Full test suite passes
+- [x] 4.1 Type checking passes
+- [x] 4.2 Build still succeeds
+- [x] 4.3 Full test suite passes
 
 #### Manual
 
-- [ ] 4.4 Decisive win shows correct winner, score, past-results line
-- [ ] 4.5 Tie game announced correctly
-- [ ] 4.6 Same-name game keeps identities consistent with two separate past-results lines
-- [ ] 4.7 Back to menu, then Create Cards and Play Game both still work
+- [x] 4.4 Decisive win shows correct winner, score, past-results line
+- [x] 4.5 Tie game announced correctly
+- [x] 4.6 Same-name game keeps identities consistent with two separate past-results lines
+- [x] 4.7 Back to menu, then Create Cards and Play Game both still work
