@@ -21,3 +21,13 @@
 **Rule:** when using a still-prefixed CSS property, always declare both the -webkit- (or other vendor) prefix and the standard property name together, even if the standard one isn't universally supported yet
 
 **Applies to:** any future CSS Module or inline style using vendor-prefixed properties
+
+## Pure functions with implicit input-range assumptions need the guarantee stated explicitly
+
+**Context:** src/lib/game.ts:138-142 (getGridDimensions)
+
+**Problem:** `getGridDimensions(0)` silently returns a degenerate `{rows: 3, columns: 0}` rather than erroring — safe today only because every call site passes `state.tiles.length`, which is always `2 * pairCount` with `pairCount` validated `>=10` upstream (FR-005). Nothing in the function itself documents or enforces that assumption.
+
+**Rule:** when a pure function's correctness depends on an input range guaranteed only by its caller(s), state that assumption in a comment at the function, so a future caller outside the validated flow doesn't inherit a silent edge case
+
+**Applies to:** src/lib/game.ts and any future pure function whose safety depends on a caller-side invariant rather than its own validation

@@ -1,7 +1,7 @@
 ---
 change_id: multi-row-tile-grid
 title: Multi-row tile grid
-status: implemented
+status: impl_reviewed
 created: 2026-09-14
 updated: 2026-09-14
 roadmap_id: null
