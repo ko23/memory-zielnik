@@ -7,6 +7,7 @@ import {
   selectTile,
   type GameState,
 } from "../lib/game";
+import styles from "./GameBoard.module.css";
 
 const MISMATCH_REVEAL_MS = 1200;
 
@@ -61,15 +62,15 @@ export function GameBoard({ players, pairCount, startingPlayer, onFinished }: Ga
             <button
               key={index}
               type="button"
+              className={`${styles.tile} ${tile.matched ? styles.tileMatched : ""}`}
               onClick={() => handleTileClick(index)}
               disabled={tile.matched || state.phase !== "selecting" || state.selected.includes(index)}
             >
               {faceUp && card ? (
-                <span>
-                  <img src={card.imageDataUrl} alt={card.name} width={60} />
-                  <br />
-                  {card.name}
-                </span>
+                <>
+                  <img className={styles.tileImage} src={card.imageDataUrl} alt={card.name} />
+                  <span className={styles.tileName}>{card.name}</span>
+                </>
               ) : (
                 "?"
               )}
