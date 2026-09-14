@@ -312,26 +312,26 @@ Not applicable — this only adds new cards via user action or the existing `see
 
 #### Automated
 
-- [x] 3.1 Type checking passes
-- [x] 3.2 Build still succeeds
+- [x] 3.1 Type checking passes — e3ff6e3
+- [x] 3.2 Build still succeeds — e3ff6e3
 
 #### Manual
 
-- [x] 3.3 Add a card end-to-end; it appears in the list after approval
-- [x] 3.4 Reject returns to name entry with the name preserved
-- [x] 3.5 No-match name shows a clean not-found state
-- [x] 3.6 New card persists across a refresh
+- [x] 3.3 Add a card end-to-end; it appears in the list after approval — e3ff6e3
+- [x] 3.4 Reject returns to name entry with the name preserved — e3ff6e3
+- [x] 3.5 No-match name shows a clean not-found state — e3ff6e3
+- [x] 3.6 New card persists across a refresh — e3ff6e3
 
 ### Phase 4: Edit + delete
 
 #### Automated
 
-- [ ] 4.1 Type checking passes
-- [ ] 4.2 Build still succeeds
-- [ ] 4.3 Full test suite passes
+- [x] 4.1 Type checking passes
+- [x] 4.2 Build still succeeds
+- [x] 4.3 Full test suite passes
 
 #### Manual
 
-- [ ] 4.4 Rename-only edit preserves the image
-- [ ] 4.5 Rename-with-new-image edit replaces in place (no duplicate)
-- [ ] 4.6 Delete confirm/cancel/confirm-yes all behave correctly
+- [x] 4.4 Rename-only edit preserves the image
+- [x] 4.5 Rename-with-new-image edit replaces in place (no duplicate)
+- [x] 4.6 Delete confirm/cancel/confirm-yes all behave correctly
