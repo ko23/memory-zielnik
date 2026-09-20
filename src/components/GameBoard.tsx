@@ -9,6 +9,7 @@ import {
   type GameState,
 } from "../lib/game";
 import styles from "./GameBoard.module.css";
+import cauldronBack from "../assets/cauldron.jpg";
 
 const MISMATCH_REVEAL_MS = 1200;
 
@@ -77,7 +78,7 @@ export function GameBoard({ players, pairCount, startingPlayer, onFinished }: Ga
                   <span className={styles.tileName}>{card.name}</span>
                 </>
               ) : (
-                "?"
+                <img className={styles.tileBack} src={cauldronBack.src} alt="" />
               )}
             </button>
           );

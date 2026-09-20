@@ -179,24 +179,24 @@ Not applicable — no persisted data changes. `assets/cauldron-source.jpg` is a 
 
 #### Automated
 
-- [x] 1.1 `assets/herb-seed-sources/` no longer contains `cauldron.jpg`
-- [x] 1.2 `src/assets/cauldron.jpg` exists
-- [x] 1.3 Generated file confirmed 300px wide
+- [x] 1.1 `assets/herb-seed-sources/` no longer contains `cauldron.jpg` — 97037fb
+- [x] 1.2 `src/assets/cauldron.jpg` exists — 97037fb
+- [x] 1.3 Generated file confirmed 300px wide — 97037fb
 
 #### Manual
 
-- [x] 1.4 `src/assets/cauldron.jpg` opens as a recognizable, non-corrupted image
+- [x] 1.4 `src/assets/cauldron.jpg` opens as a recognizable, non-corrupted image — 97037fb
 
 ### Phase 2: Component integration
 
 #### Automated
 
-- [ ] 2.1 Type check passes (`npx astro check`)
-- [ ] 2.2 Build succeeds (`npm run build`)
+- [x] 2.1 Type check passes (`npx astro check`)
+- [x] 2.2 Build succeeds (`npm run build`)
 
 #### Manual
 
-- [ ] 2.3 Every face-down tile shows the cauldron image filling the tile, no `"?"` or empty space
-- [ ] 2.4 Flipping a tile face-up then back to face-down (mismatch) shows the cauldron image correctly
-- [ ] 2.5 Cauldron/flame subject stays framed after the `cover` crop
-- [ ] 2.6 No layout shift or overflow beyond the 150×150 tile boundary
+- [x] 2.3 Every face-down tile shows the cauldron image filling the tile, no `"?"` or empty space
+- [x] 2.4 Flipping a tile face-up then back to face-down (mismatch) shows the cauldron image correctly
+- [x] 2.5 Cauldron/flame subject stays framed after the `cover` crop
+- [x] 2.6 No layout shift or overflow beyond the 150×150 tile boundary
