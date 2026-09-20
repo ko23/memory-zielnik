@@ -191,12 +191,12 @@ Not applicable — no persisted data changes. `assets/cauldron-source.jpg` is a 
 
 #### Automated
 
-- [x] 2.1 Type check passes (`npx astro check`)
-- [x] 2.2 Build succeeds (`npm run build`)
+- [x] 2.1 Type check passes (`npx astro check`) — ecb6936
+- [x] 2.2 Build succeeds (`npm run build`) — ecb6936
 
 #### Manual
 
-- [x] 2.3 Every face-down tile shows the cauldron image filling the tile, no `"?"` or empty space
-- [x] 2.4 Flipping a tile face-up then back to face-down (mismatch) shows the cauldron image correctly
-- [x] 2.5 Cauldron/flame subject stays framed after the `cover` crop
-- [x] 2.6 No layout shift or overflow beyond the 150×150 tile boundary
+- [x] 2.3 Every face-down tile shows the cauldron image filling the tile, no `"?"` or empty space — ecb6936
+- [x] 2.4 Flipping a tile face-up then back to face-down (mismatch) shows the cauldron image correctly — ecb6936
+- [x] 2.5 Cauldron/flame subject stays framed after the `cover` crop — ecb6936
+- [x] 2.6 No layout shift or overflow beyond the 150×150 tile boundary — ecb6936
