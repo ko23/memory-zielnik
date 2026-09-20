@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type SubmitEvent } from "react";
 import { listCards } from "../lib/storage";
 import { flipCoin, resolvePlayerNames } from "../lib/game";
 
@@ -39,14 +39,14 @@ export function GameSetup({ onStart }: GameSetupProps) {
     };
   }, []);
 
-  function handleNamesSubmit(event: React.FormEvent) {
+  function handleNamesSubmit(event: SubmitEvent) {
     event.preventDefault();
     if (!name1.trim() || !name2.trim()) return;
     setPlayers(resolvePlayerNames(name1, name2));
     setStep("count");
   }
 
-  function handleCountSubmit(event: React.FormEvent) {
+  function handleCountSubmit(event: SubmitEvent) {
     event.preventDefault();
     setStep("start");
   }
